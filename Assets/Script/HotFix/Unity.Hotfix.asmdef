@@ -1,0 +1,18 @@
+{
+    "name": "Unity.Hotfix",
+    "references": [
+        "GUID:04a8999bfe27fdb449ae86b91ee09f80",
+        "GUID:d6e319c54d77d714e8368b7a522d7267"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

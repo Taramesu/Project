@@ -1,0 +1,15 @@
+{
+    "name": "Unity.Model",
+    "references": [
+        "GUID:04a8999bfe27fdb449ae86b91ee09f80"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
