@@ -1,10 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
-using UnityEngine.Networking;
 using UnityEngine;
-using System.Collections;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 
@@ -84,9 +83,8 @@ public class BundleDownloaderComponent : UnitySingleton<BundleDownloaderComponen
         Hotfix hotfix = go.AddComponent<Hotfix>();
         hotfix.LoadHotfixAssembly();
     }
-  
 
-    public static string AssetBundleServerUrl = "http://192.168.5.74:8080/";// "http://193.112.44.199:8080/";
+    public static string AssetBundleServerUrl = "http://192.168.0.76:8080/";// "http://192.168.5.74:8080/";
 
     public static string GetUrl()
     {
@@ -111,7 +109,7 @@ public class BundleDownloaderComponent : UnitySingleton<BundleDownloaderComponen
     private IEnumerator StartAsync()
     {
         // 获取远程的Version.txt
-        string versionUrl = "";
+        string versionUrl;
         
         versionUrl = GetUrl()+ "StreamingAssets/" + "Version.txt";
         Debug.Log(versionUrl);

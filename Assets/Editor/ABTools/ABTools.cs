@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
+using UnityEngine;
 
 public class ABTools 
 {
@@ -164,9 +163,6 @@ public class ABTools
     //获取要打包的资源文件
     static void GetResFile(string path, Dictionary<string, string> dir)
     {
-        //E:\游戏学院-Unity\Unity-热更新(三)框架搭建\资料\ABFrame\Assets\Res\sprite\loginBG.jpg
-        //--->sprite/loginBG.jpg  -->sprite/loginBG.unity3d
-        //E:/游戏学院-Unity\Unity-热更新(三)框架搭建/资料\ABFrame/Assets/Res/
         //统一使用"/" 用于字符串查找替换
         string resRoot = Path.Combine(Application.dataPath, "Res").Replace(@"\", "/");
 

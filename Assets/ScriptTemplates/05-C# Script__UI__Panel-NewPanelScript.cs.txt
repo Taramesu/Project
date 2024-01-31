@@ -1,0 +1,18 @@
+using UIFrameWork;
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : BasePanel
+{
+    private static readonly string path = "Prefab/Panel/#SCRIPTNAME#";
+    public #SCRIPTNAME#() : base(new UIType(path))
+    {
+
+    }
+    public override void OnEnter()
+    {
+        GameObject panel = UIManager.Instance.GetSingleUI(UIType);
+        
+    }
+}
+#ROOTNAMESPACEEND#

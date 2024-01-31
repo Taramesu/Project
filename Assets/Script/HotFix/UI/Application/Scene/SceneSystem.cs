@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-//场景管理系统
+﻿//场景管理系统
 public class SceneSystem:SingletonBase<SceneSystem>
 {
     private SceneBase sceneBase;
