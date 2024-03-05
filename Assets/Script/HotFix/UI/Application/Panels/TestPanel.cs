@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UIFrameWork;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TestPanel : BasePanel
 {
-    private static readonly string path = "Prefabs/Panels/TestPanel";
+    private static readonly string path = "Prefab/Panel/TestPanel";
     public TestPanel() : base(new UIType(path))
     {
 

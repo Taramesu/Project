@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using UIFrameWork;
 using Unity.Model;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UIFrameWork;
 
 namespace Unity.Hotfix
 {

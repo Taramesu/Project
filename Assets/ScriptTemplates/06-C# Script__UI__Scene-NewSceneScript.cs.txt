@@ -1,0 +1,30 @@
+using UIFrameWork;
+using UnityEngine.SceneManagement;
+
+#ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : SceneBase
+{
+    private static readonly string sceneName = "#SCRIPTNAME#";
+    public override void OnEnter()
+    {
+        if (SceneManager.GetActiveScene().name != sceneName)
+        {
+
+        }
+        else
+        {
+
+        }
+    }
+
+    public override void OnExit()
+    {
+
+    }
+
+    private void SceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+    }
+}
+#ROOTNAMESPACEEND#
