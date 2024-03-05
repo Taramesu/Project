@@ -79,3 +79,4 @@ crashlytics-build.properties
 
 /[Aa]ssets/Res/
 /[Aa]ssets/Resources/
+/out/
