@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 265473035}
   - component: {fileID: 265473038}
   - component: {fileID: 265473039}
+  - component: {fileID: 265473040}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -344,9 +345,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265473034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52be72280eec9284ea6dfa435a26e7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &265473040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265473034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42264a619d8036d4ca2c0d19f56f4489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &419693449
@@ -821,9 +834,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 265473038}
-        m_TargetAssemblyTypeName: Echo, Unity.Model
-        m_MethodName: Connection
+      - m_Target: {fileID: 265473040}
+        m_TargetAssemblyTypeName: test, Unity.Model
+        m_MethodName: OnConnectClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
