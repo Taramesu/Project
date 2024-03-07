@@ -5,6 +5,8 @@ public class ByteArray
 {
     //默认大小
     const int DEFAULT_SIZE = 1024;
+    //默认有效数据阈值
+    const int MIN_VALID_DATA_SIZE = 8;
     //初始大小
     int initSize = 0;
     //缓冲区
@@ -18,6 +20,8 @@ public class ByteArray
     public int remain { get { return capacity - writeIdx; } }
     //数据长度
     public int length { get { return writeIdx-readIdx; } }
+    //有效空间是否足够
+    public bool remainEnough { get { return remain > MIN_VALID_DATA_SIZE; } }
 
     //构造函数
     public ByteArray(int size =  DEFAULT_SIZE)
@@ -72,7 +76,7 @@ public class ByteArray
     /// </summary>
     public void CheckAndMoveBytes()
     {
-        if(length<8)
+        if(length<MIN_VALID_DATA_SIZE)
         {
             MoveBytes();
         }
