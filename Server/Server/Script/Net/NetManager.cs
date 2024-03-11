@@ -1,5 +1,4 @@
-﻿
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Threading.Channels;
@@ -8,8 +7,10 @@ public class NetManager
 {
     public static Socket listenfd;
     public static Dictionary<Socket, ClientState> clients = new Dictionary<Socket, ClientState>();
-    
+    //select检查列表
     static List<Socket> checkRead = new List<Socket>();
+    //ping间隔
+    public static long pingInterval = 30;
 
     public static void StartLoop(int listenPort)
     {
@@ -41,7 +42,7 @@ public class NetManager
                     ReadClientfd(s);
                 }
             }
-            //超时
+            //超时检测
             Timer();
         }
     }
@@ -192,6 +193,7 @@ public class NetManager
             ClientState state = new ClientState();
             state.socket = clientfd;
             clients.Add(clientfd,state);
+            state.lastPingTime = GetTimeStamp();
         }
         catch (SocketException e) 
         {
@@ -215,7 +217,14 @@ public class NetManager
     {
         //消息分发
         MethodInfo mi = typeof(EventHandler).GetMethod("OnTimer");
-        object[] ob = { };
+        object[] ob = {};
         mi.Invoke(null, ob);
+    }
+
+    //获取时间戳
+    public static long GetTimeStamp()
+    {
+        TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+        return Convert.ToInt64(ts.TotalSeconds);
     }
 }
