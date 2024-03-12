@@ -56,6 +56,7 @@ public static class NetManager
     private static void OnMsgPong(MsgBase msgBase)
     {
         lastPongTime = Time.time;
+        Debug.Log("Receive MsgPong");
     }
 
     #region 异步对外接口及相应回调函数
@@ -313,7 +314,9 @@ public static class NetManager
         {
             MsgPing msgPing = new();
             Send(msgPing);
+            Debug.Log("Send MsgPing");
             lastPingTime = Time.time;
+            Debug.Log($"PongTimeInterval:{Time.time - lastPongTime},TimeNow:{Time.time},LastPongTime:{lastPongTime}");
         }
         //检测PONG时间
         if (Time.time - lastPongTime > pingInterval * 4)
