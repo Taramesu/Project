@@ -1,11 +1,11 @@
 ﻿
 public partial class MsgHandler
 {
-    public static void MsgMove(ClientState c, MsgBase msgBase)
+    public static void MsgMove(ClientState state, MsgBase msgBase)
     {
         MsgMove msgMove = (MsgMove)msgBase;
         Console.WriteLine(msgMove.x);
         msgMove.x++;
-        NetManager.Send(c, msgMove);
+        NetManager.Send(state, msgMove);
     }
 }

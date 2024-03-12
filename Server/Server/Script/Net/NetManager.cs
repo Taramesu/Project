@@ -104,13 +104,13 @@ public class NetManager
         clients.Remove(state.socket);
     }
 
-    public static void Send(ClientState cs, MsgBase msg)
+    public static void Send(ClientState state, MsgBase msg)
     {
-        if(cs == null)
+        if(state == null)
         {
             return;
         }
-        if(!cs.socket.Connected)
+        if(!state.socket.Connected)
         {
             return;
         }
@@ -128,7 +128,7 @@ public class NetManager
         Array.Copy(bodyBytes, 0, sendBytes, 2 + nameBytes.Length, bodyBytes.Length);
         try
         {
-            cs.socket.BeginSend(sendBytes, 0, sendBytes.Length, 0, null, null);
+            state.socket.BeginSend(sendBytes, 0, sendBytes.Length, 0, null, null);
         }
         catch(SocketException e) 
         {
