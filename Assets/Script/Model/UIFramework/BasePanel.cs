@@ -5,7 +5,7 @@ namespace UIFrameWork
 {
     public abstract class BasePanel 
     {
-        public UIType UIType { get; private set; }
+        public virtual UIType UIType { get; private set; }
 
         protected BasePanel() { }
         public BasePanel(UIType uIType)

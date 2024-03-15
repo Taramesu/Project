@@ -6,7 +6,12 @@ namespace UIFrameWork
 {
     public class UITool
     {
-        //给指定面版获取或添加一个组件
+        /// <summary>
+        /// 给指定面版获取或添加一个组件
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="panel"></param>
+        /// <returns></returns>
         public static T GetOrAddComponent<T>(GameObject panel) where T : Component
         {
             if (panel == null)
@@ -15,7 +20,11 @@ namespace UIFrameWork
                 panel.AddComponent<T>();
             return panel.GetComponent<T>();
         }
-        //给指定面板移除一个组件
+        /// <summary>
+        /// 给指定面板移除一个组件
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="panel"></param>
         public static void RemoveComponent<T>(GameObject panel) where T : Component
         {
             if (panel == null)
@@ -25,7 +34,12 @@ namespace UIFrameWork
             GameObject.Destroy(panel.GetComponent<T>());
         }
 
-        //根据名称在指定面板中查找一个子对象
+        /// <summary>
+        /// 根据名称在指定面板中查找一个子对象
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="panel"></param>
+        /// <returns></returns>
         public static GameObject FindChildGameObject(string name, GameObject panel)
         {
             if (name == null || name.Length == 0 || panel == null)
@@ -40,7 +54,13 @@ namespace UIFrameWork
             return null;
         }
 
-        //根据名称在指定面板中获取或添加一个组件
+        /// <summary>
+        /// 根据名称在指定面板中获取或添加一个组件
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="name"></param>
+        /// <param name="panel"></param>
+        /// <returns></returns>
         public static T GetOrAddComponentInChildren<T>(string name, GameObject panel) where T : Component
         {
             if (name == null || name.Length == 0 || panel == null)

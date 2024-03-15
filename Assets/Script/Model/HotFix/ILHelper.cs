@@ -62,7 +62,7 @@ public static class ILHelper
     public static void RegisterAdaptor(ILRuntime.Runtime.Enviorment.AppDomain appdomain)
     {
         //appDomain.RegisterCrossBindingAdaptor(new UIBaseAdapter());
-
+        appdomain.RegisterCrossBindingAdaptor(new BasePanelAdapter());
     }
 
     //委托转换

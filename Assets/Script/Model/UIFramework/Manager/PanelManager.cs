@@ -12,18 +12,20 @@ namespace UIFrameWork
         public void Push(BasePanel nextPanel, bool pausePanel = true)
         {
             if (nextPanel == null)
+            {
+                Debug.Log("Error: nextPanel is null");
                 return;
+            }
             if (stackPanel.Count > 0)
             {
                 //添加新面板时原顶部面板要停止  
                 if (pausePanel)
                 {
-                    BasePanel topPanel = stackPanel.Peek();
-                    topPanel.OnPause();
+                    stackPanel.Peek().OnPause();
                 }             
             }
             stackPanel.Push(nextPanel);
-            GameObject panel = UIManager.Instance.GetSingleUI(nextPanel.UIType);
+            UIManager.Instance.GetSingleUI(nextPanel.UIType);
             nextPanel.OnEnter();//新面板要调用进入方法
         }
 

@@ -12,7 +12,7 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
 {
    
     //是否使用Assetbundle模式
-    public static bool useAB = false;
+    public static bool useAB = true;
 
     public static AssetBundleManifest AssetBundleManifestObject { get; set; }
 

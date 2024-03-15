@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitySingleton<T> : MonoBehaviour where T : MonoBehaviour
@@ -37,6 +35,32 @@ public class UnitySingleton<T> : MonoBehaviour where T : MonoBehaviour
         else
         {
             GameObject.Destroy(this.gameObject);
+        }
+    }
+}
+
+public class SingletonBase<T> where T : class, new()
+{
+    private static T _instance;
+    private static readonly object syslock = new object();
+
+    protected SingletonBase()
+    {
+
+    }
+    public static T Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                lock (syslock)
+                {
+                    if (_instance == null)
+                        _instance = new T();
+                }
+            }
+            return _instance;
         }
     }
 }
