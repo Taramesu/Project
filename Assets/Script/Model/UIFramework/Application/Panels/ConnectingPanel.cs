@@ -34,7 +34,7 @@ public class ConnectingPanel : BasePanel
         {
             PanelManager.Instance.Pop();
             PanelManager.Instance.Push(new LoginPanel());
-        },null);
+        }, null);
     }
 
     private void OnConnectFail(string err)
@@ -42,8 +42,8 @@ public class ConnectingPanel : BasePanel
         Debug.Log(err);
         Loom.QueueOnMainThread((param) =>
         {
-            PanelManager.Instance.Pop();    
+            PanelManager.Instance.Pop();
             PanelManager.Instance.Push(new ConnectFailPanel());
-        },null);
+        }, null);
     }
 }

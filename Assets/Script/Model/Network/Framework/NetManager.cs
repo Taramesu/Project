@@ -308,6 +308,7 @@ public static class NetManager
     {
         //ÊÇ·ñÆôÓÃ
         if (!isUsePing) { return; }
+        if (socket == null || socket.Connected == false) { return; }
         //·¢ËÍPING
         if (Time.time - lastPingTime > pingInterval)
         {

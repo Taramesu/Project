@@ -115,8 +115,7 @@ public class BundleDownloaderComponent : UnitySingleton<BundleDownloaderComponen
             Debug.Log("版本信息:\n" + webRequestAsync.downloadHandler.text);
             versionData = webRequestAsync.downloadHandler.data;
             //反序列化成VersionConfig
-            remoteVersionConfig = JsonHelper.FromJson<VersionConfig>(webRequestAsync.downloadHandler.text);
-            
+            remoteVersionConfig = JsonHelper.FromJson<VersionConfig>(webRequestAsync.downloadHandler.text);  
         }
 
       

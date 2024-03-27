@@ -10,7 +10,7 @@ public class GameLaunch : UnitySingleton<GameLaunch>
         Loom.Initialize();
         //加载开始页面
         PanelManager.Instance.Push(new StartGamePanel());
-        //NetworkInit();
+        NetworkInit();
     }
 
     private void NetworkInit()
@@ -18,6 +18,7 @@ public class GameLaunch : UnitySingleton<GameLaunch>
         NetEvent.Instance.AddEventListener(NetEventType.ConnectSucc, OnConnectSucc);
         NetEvent.Instance.AddEventListener(NetEventType.ConnectFail, OnConnectFail);
         NetEvent.Instance.AddEventListener(NetEventType.Close, OnConnectClose);
+        NetMsg.Instance.AddEventListener("MsgKick", OnKick);
     }
 
     private void Update()
@@ -39,5 +40,10 @@ public class GameLaunch : UnitySingleton<GameLaunch>
     private void OnConnectClose(string err)
     {
         throw new NotImplementedException();
+    }
+
+    private void OnKick(MsgBase msg)
+    {
+
     }
 }
