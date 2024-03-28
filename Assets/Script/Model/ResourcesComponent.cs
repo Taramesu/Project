@@ -12,7 +12,7 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
 {
 
     //是否使用Assetbundle模式
-    public static bool useAB = true;
+    public static bool useAB = false;
 
     public static AssetBundleManifest AssetBundleManifestObject { get; set; }
 
@@ -38,7 +38,14 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
         this.resourceCache.Clear();
     }
 
-    //加载资源对外暴漏的接口 bundleName=路径
+    /// <summary>
+    /// 加载资源对外暴漏的接口 调用前请确保已经对资源重新设置ab名称
+    /// </summary>
+    /// <param name="obj">资源名称</param>
+    /// <param name="bundleName">资源路径</param>
+    /// <param name="isScene"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public UnityEngine.Object GetAsset(string obj, string bundleName, bool isScene = false)
     {
         //思想:检查所有资源是否已经加载缓存到字典里
@@ -115,6 +122,7 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
 
         //因为所有资源路径都是唯一的 所以这里长度永远只会是1
         List<string> realPath = AssetDatabase.GetAssetPathsFromAssetBundle(bundleName).ToList();
+        if (realPath.Count == 0) { Debug.Log("未获取到资源"); }
         if (realPath.Count > 1)
         {
             Debug.LogError("realPath > 1");

@@ -6,7 +6,7 @@ namespace Skill
     /// <summary>
     /// 技能释放器
     /// </summary>
-    public class SkillDeployer : MonoBehaviour
+    public abstract class SkillDeployer : MonoBehaviour
     {
         //由技能管理器提供
         private SkillData skillData;
@@ -33,10 +33,28 @@ namespace Skill
 
             //影响
             impactArray = DeployerConfigFactory.CreateImpact(skillData);
-        }       
+        }
 
         //执行算法对象
-
+        /// <summary>
+        /// 选取敌人
+        /// </summary>
+        public void CalculateTargets()
+        {
+            skillData.targets = selector.SelectTarget(skillData, transform);
+        }
+        
+        /// <summary>
+        /// 执行影响效果
+        /// </summary>
+        public void ImpactTargets()
+        {
+            for (int i = 0; i < impactArray.Length; i++)
+            {
+                impactArray[i].Execute(this);
+            }
+        }
         //释放方式
+        public abstract void DeploySkill();
     }
 }

@@ -1,3 +1,4 @@
+ï»¿using System;
 using System.Collections;
 using UnityEngine;
 
@@ -19,14 +20,16 @@ namespace Skill
         {
             if (data.prefabName != null)
             {
-                //¸ù¾İÃû³Æ¼ÓÔØ¼¼ÄÜÔ¤ÖÆ¼ş
-                data.skillPrefab = ResourcesComponent.Instance.GetAsset(data.prefabName, "Prefab/Skill" + data.prefabName) as GameObject;
+                //æ ¹æ®åç§°åŠ è½½æŠ€èƒ½é¢„åˆ¶ä»¶
+                var path = "Prefab/Skill/" + data.prefabName;
+                data.skillPrefab = ResourcesComponent.Instance.GetAsset(data.prefabName, path) as GameObject;
+                //è®¾ç½®æŠ€èƒ½é‡Šæ”¾è€…
                 data.owner = gameObject;
             }
         }
 
         /// <summary>
-        /// ¼¼ÄÜÊÍ·ÅÌõ¼şÅĞ¶Ï
+        /// æŠ€èƒ½é‡Šæ”¾æ¡ä»¶åˆ¤æ–­
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -40,7 +43,9 @@ namespace Skill
                     skillData = skill;
                 }
             }
-            if (skillData != null && skillData.cdRemain <= 0)
+            if (skillData != null 
+                && skillData.cdRemain <= 0
+                && skillData.costEnergy <= skillData.owner.GetComponent<CharacterStatus>().Energy)
             {
                 return skillData;
             }
@@ -51,25 +56,26 @@ namespace Skill
         }
 
         /// <summary>
-        /// Éú³É¼¼ÄÜ
+        /// ç”ŸæˆæŠ€èƒ½
         /// </summary>
         /// <param name="skillData"></param>
         public void GenerateSkill(SkillData skillData)
         {
-            //´´½¨¼¼ÄÜÔ¤ÖÆ¼ş
+            //åˆ›å»ºæŠ€èƒ½é¢„åˆ¶ä»¶
             GameObject skillGo = Pool.Instance.CreateObject(skillData.prefabName, skillData.skillPrefab, transform.position, transform.rotation);
-            //´«µİ¼¼ÄÜÊı¾İ
+            //ä¼ é€’æŠ€èƒ½æ•°æ®
             SkillDeployer deployer = skillGo.GetComponent<SkillDeployer>();
-            //´ËÊ±ÄÚ²¿´´½¨Ëã·¨¶ÔÏó
+            //æ­¤æ—¶å†…éƒ¨åˆ›å»ºç®—æ³•å¯¹è±¡
             deployer.SkillData = skillData;
-
-            //Ïú»Ù¼¼ÄÜ
+            //å†…éƒ¨æ‰§è¡Œç®—æ³•å¯¹è±¡
+            deployer.DeploySkill();
+            //é”€æ¯æŠ€èƒ½
             Pool.Instance.CollectObject(skillGo, skillData.durationTime);
-            //¿ªÆô¼¼ÄÜÀäÈ´
+            //å¼€å¯æŠ€èƒ½å†·å´
             StartCoroutine(CoolTimeDown(skillData));
         }
 
-        //¼¼ÄÜÀäÈ´
+        //æŠ€èƒ½å†·å´
         private IEnumerator CoolTimeDown(SkillData data)
         {
             data.cdRemain = data.cd;

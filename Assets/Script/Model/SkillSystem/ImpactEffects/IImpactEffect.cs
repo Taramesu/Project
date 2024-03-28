@@ -5,6 +5,6 @@ namespace Skill
     /// </summary>
     public interface IImpactEffect
     {
-
+        void Execute(SkillDeployer deployer);
     }
 }
