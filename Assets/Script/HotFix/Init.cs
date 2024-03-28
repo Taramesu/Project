@@ -17,11 +17,12 @@ namespace Unity.Hotfix
             Debug.Log("添加ui组件");
 
             UnityEngine.Object.Destroy(GameObject.Find("Canvas/HotfixPanel").gameObject);
+            
             PanelManager.Instance.Push(new MainMenuPanel());
             PanelManager.Instance.Push(new MainCityPanel(),false);
             //PanelManager.Instance.Push(new CharacterPanel(),false);
 
-            //UnityEngine.Object go = ResourcesComponent.Instance.GetAsset("LoginPanel", "prefab/LoginPanel");
+            //UnityEngine.Object go = ResourcesComponent.Instance.GetAsset("TestPanel", "prefab/TestPanel");
             //UnityEngine.Object go = res.GetAsset("LoadTest", "prefab/LoadTest");
             //GameObject loginPanel=(GameObject)GameObject.Instantiate(go);
 

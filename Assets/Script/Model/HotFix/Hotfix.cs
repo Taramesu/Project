@@ -50,7 +50,6 @@ public sealed class Hotfix : MonoBehaviour
     /// </summary>
     public void LoadHotfixAssembly()
     {
-        //ResourcesComponent 多次Get的问题 可自行设计 对于非新手级别的你 应该懂的
         GameObject code = (GameObject)ResourcesComponent.Instance.GetAsset("Code", "prefab/Code");
 
         byte[] assBytes = code.GetComponent<CodeReference>().HotfixDll.bytes;

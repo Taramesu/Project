@@ -33,31 +33,24 @@ public class BundleDownloaderComponent : UnitySingleton<BundleDownloaderComponen
     //正在请求的对象
     public UnityWebRequest webRequest;
 
-    Transform canvas;
-    Image progressBar;
-    Text size;
-    Text state;
+    public Image progressBar { private get; set; }
+    public Text state { private get; set; }
+    public Text size { private get; set; }
     private new void Awake()
     {
         base.Awake();
-        canvas = GameObject.Find("Canvas").transform;
-        var obj = Resources.Load("prefab/HotfixPanel");
-        GameObject go = (GameObject)GameObject.Instantiate(obj);
-        go.name = go.name.Replace("(Clone)", "");
-        go.transform.SetParent(canvas, false);
-
-        progressBar = go.transform.Find("Image/progressBar").GetComponent<Image>();
-        size=go.transform.Find("Image/size").GetComponent<Text>();
-        state = go.transform.Find("Image/state").GetComponent<Text>();
 
         bundles = new Queue<string>();
         downloadedBundles = new HashSet<string>();
         downloadingBundle = "";
+    }
 
-        //开始下载
+    /// <summary>
+    /// 检测热更资源并下载
+    /// </summary>
+    public void StartDownload()
+    {
         StartCoroutine(DownloadAsync(null));
-        //StartCoroutine(DownloadAsync(LoadComplete));
-
     }
 
     int gameState = 0;
@@ -84,7 +77,7 @@ public class BundleDownloaderComponent : UnitySingleton<BundleDownloaderComponen
         hotfix.LoadHotfixAssembly();
     }
 
-    public static string AssetBundleServerUrl = "http://192.168.0.76:8080/";// "http://192.168.5.74:8080/";
+    public static string AssetBundleServerUrl = "http://127.0.0.1:8080/";// "http://192.168.5.74:8080/";
 
     public static string GetUrl()
     {
@@ -122,8 +115,7 @@ public class BundleDownloaderComponent : UnitySingleton<BundleDownloaderComponen
             Debug.Log("版本信息:\n" + webRequestAsync.downloadHandler.text);
             versionData = webRequestAsync.downloadHandler.data;
             //反序列化成VersionConfig
-            remoteVersionConfig = JsonHelper.FromJson<VersionConfig>(webRequestAsync.downloadHandler.text);
-            
+            remoteVersionConfig = JsonHelper.FromJson<VersionConfig>(webRequestAsync.downloadHandler.text);  
         }
 
       
@@ -296,7 +288,7 @@ public class BundleDownloaderComponent : UnitySingleton<BundleDownloaderComponen
             size.text = $"{alreadyDownloadBytes/1024.00f/ 1024.00f}M/{this.TotalSize/ 1024.00f / 1024.00f}M";
             float progress = alreadyDownloadBytes * 1f / this.TotalSize;
             progressBar.fillAmount = progress;
-            Debug.Log(size.text+":"+progress);
+            Debug.Log(size +":"+progress);
            
             //得到一个进度
             return progress;

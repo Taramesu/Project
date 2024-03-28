@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BasePanelAdapter" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="BasePanelAdapter.Adapter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\Model\Adapter\BasePanelAdapter.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAACAA=</HashCode>
+      <FileName>Assets\Script\Model\Adapter\BasePanelAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BundleDownloaderComponent" Collapsed="true">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACQAACAAYIQAEAAQAAAAQBKEAwAgAACAAEA=</HashCode>
+      <FileName>Assets\Script\Model\Assetbundle\BundleDownloaderComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileVersionInfo" Collapsed="true">
+    <Position X="26.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAgAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Assetbundle\VersionConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VersionConfig" Collapsed="true">
+    <Position X="28.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Script\Model\Assetbundle\VersionConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventBase&lt;T, P, X&gt;" Collapsed="true">
+    <Position X="6.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgABAAAACAAAAAAAAAAAgAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Event\EventBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLaunch" Collapsed="true">
+    <Position X="5.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIAAAAAAAAAAAAgAACQAAIAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\Model\GameLaunch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pool" Collapsed="true">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAARAAAAAAgAABAAAAgAAABAAAABACEA=</HashCode>
+      <FileName>Assets\Script\Model\GameObjectPool\Pool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ByteHelper" Collapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAEAAAAAAAAAAAAAgAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Script\Model\Help\ByteHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileHelper" Collapsed="true">
+    <Position X="24.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAkAA=</HashCode>
+      <FileName>Assets\Script\Model\Help\FileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JsonHelper" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAABA=</HashCode>
+      <FileName>Assets\Script\Model\Help\JsonHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Loom" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAQAAAAAAAAEBAgAACAAMIAAAAAAACEA=</HashCode>
+      <FileName>Assets\Script\Model\Help\Loom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MD5Helper" Collapsed="true">
+    <Position X="24.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Help\MD5Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PathHelper" Collapsed="true">
+    <Position X="28.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Script\Model\Help\PathHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringHelper" Collapsed="true">
+    <Position X="26.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAAAACAIAAAAAAAAIAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Help\StringHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeReference" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\Model\HotFix\CodeReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotfix" Collapsed="true">
+    <Position X="28.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAEAAAAAABAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Script\Model\HotFix\Hotfix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILHelper" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAACAAAAAAAAIBAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\HotFix\ILHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Echo" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAEEAAAAAAEAAEAAAAAAAAAAAAAIAAEAAAAggAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Echo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ByteArray" Collapsed="true">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAiAAAAIICFAEIAIAAgAAICAAgAAAAAAEEQAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Framework\ByteArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetManager" Collapsed="true">
+    <Position X="26.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQxiCAAAgBAAAAAABEUAAsAAAAAAAAEAAAkgAACggAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Framework\NetManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetEvent" Collapsed="true">
+    <Position X="5.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Framework\NetManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetMsg" Collapsed="true">
+    <Position X="7.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Framework\NetManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgMove" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\BattleMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgRegister" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\LoginMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgLogin" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\LoginMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgKick" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\LoginMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgBase" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAEBAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\MsgBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgGetText" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\NotepadMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgSaveText" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\NotepadMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgPing" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\SysMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgPong" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Proto\SysMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="test" Collapsed="true">
+    <Position X="28.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAiAKAACCAKAAIAAAIAAAgAgAAAAAAJAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestByteArray" Collapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\Network\TestByteArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResourcesComponent" Collapsed="true">
+    <Position X="9.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAABAAAAEAAAAEEIAIAAABgAAAQAAEA=</HashCode>
+      <FileName>Assets\Script\Model\ResourcesComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAgAQAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ResourcesComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AssetBundleHelper" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAIAAAAAACAAUAAAAAAAgAAgQAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Script\Model\ResourcesComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitySingleton&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\Model\SingletonBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingletonBase&lt;T&gt;" Collapsed="true">
+    <Position X="1.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAABAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\SingletonBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillData" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIABAAiAAAJECIAKAEBAEEAAAAAgJQAACIAoA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\SkillData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConnectFailPanel" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\Application\Panels\ConnectFailPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConnectingPanel" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAACAAAAAgAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\Application\Panels\ConnectingPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotfixPanel" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\Application\Panels\HotfixPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoginPanel" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAIAAAQAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\Application\Panels\LoginPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartGamePanel" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\Application\Panels\StartGamePanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.CLRBindings" Collapsed="true">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\CLRBindings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.ResourcesComponent_Binding" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\ResourcesComponent_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_Component_Binding" Collapsed="true">
+    <Position X="24.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_Component_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_Debug_Binding" Collapsed="true">
+    <Position X="26.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_Debug_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_Events_UnityEvent_Binding" Collapsed="true">
+    <Position X="28.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_Events_UnityEvent_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_GameObject_Binding" Collapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAACAAAAAAAABAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_GameObject_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_Object_Binding" Collapsed="true">
+    <Position X="21.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_Object_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_SceneManagement_SceneManager_Binding" Collapsed="true">
+    <Position X="23" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_SceneManagement_SceneManager_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_Transform_Binding" Collapsed="true">
+    <Position X="24.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_Transform_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILRuntime.Runtime.Generated.UnityEngine_UI_Button_Binding" Collapsed="true">
+    <Position X="26.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\ILBinding\UnityEngine_UI_Button_Binding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skill.DeployerConfigFactory" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\DeployerConfigFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skill.SkillDeployer" Collapsed="true">
+    <Position X="23" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACAAAAAAAAAAAAAAAgAAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\SkillDeployer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skill.SkillManager" Collapsed="true">
+    <Position X="24.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAEAEA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\SkillManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unity.Model.UIComponent" Collapsed="true">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAEAAAAAAAIAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\Model\UIComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIFrameWork.BasePanel" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAIAAQAAAAAIAAABAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\BasePanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIFrameWork.PanelManager" Collapsed="true">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAABBACAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\Manager\PanelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIFrameWork.UIManager" Collapsed="true">
+    <Position X="2.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAIAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\Manager\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIFrameWork.UITool" Collapsed="true">
+    <Position X="21.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAEAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\UiTools\UITool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIFrameWork.UIType" Collapsed="true">
+    <Position X="23" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAACAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\UIFramework\UIType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IResetable" Collapsed="true">
+    <Position X="21.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Script\Model\GameObjectPool\Pool.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Skill.IImpactEffect" Collapsed="true">
+    <Position X="19.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\ImpactEffects\IImpactEffect.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Skill.ISelector" Collapsed="true">
+    <Position X="23" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\Selectors\ISelector.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="NetEventType" Collapsed="true">
+    <Position X="19.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAQ=</HashCode>
+      <FileName>Assets\Script\Model\Network\Framework\NetManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SkillAttackType" Collapsed="true">
+    <Position X="23" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\SkillData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SelectorType" Collapsed="true">
+    <Position X="21.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Model\SkillSystem\SkillData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

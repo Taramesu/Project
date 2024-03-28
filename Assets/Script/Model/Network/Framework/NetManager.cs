@@ -94,7 +94,7 @@ public static class NetManager
             Socket socket = (Socket)ar.AsyncState;
             socket.EndConnect(ar);
             Debug.Log("Socket Connect Succ");
-            NetEvent.Instance.Dispatch(NetEventType.ConnectSucc, "");
+            NetEvent.Instance.Dispatch(NetEventType.ConnectSucc, "Conncet Success!");
             isConnecting = false;
 
             //开始接收
@@ -154,8 +154,7 @@ public static class NetManager
         }
         readBuff.readIdx += 2;
         //解析协议名
-        int nameCount = 0;
-        string protoName = MsgBase.DecodeName(readBuff.bytes, readBuff.readIdx, out nameCount);
+        string protoName = MsgBase.DecodeName(readBuff.bytes, readBuff.readIdx, out int nameCount);
         if (protoName == "")
         {
             Debug.Log("OnReceiveData MsgBase.DecodeName fail");
@@ -309,6 +308,7 @@ public static class NetManager
     {
         //是否启用
         if (!isUsePing) { return; }
+        if (socket == null || socket.Connected == false) { return; }
         //发送PING
         if (Time.time - lastPingTime > pingInterval)
         {

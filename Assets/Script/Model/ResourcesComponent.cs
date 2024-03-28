@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ResourcesComponent : UnitySingleton<ResourcesComponent>
 {
-   
+
     //是否使用Assetbundle模式
     public static bool useAB = false;
 
@@ -38,8 +38,15 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
         this.resourceCache.Clear();
     }
 
-    //加载资源对外暴漏的接口 bundleName=路径
-    public UnityEngine.Object GetAsset(string obj,string bundleName,bool isScene=false)
+    /// <summary>
+    /// 加载资源对外暴漏的接口 调用前请确保已经对资源重新设置ab名称
+    /// </summary>
+    /// <param name="obj">资源名称</param>
+    /// <param name="bundleName">资源路径</param>
+    /// <param name="isScene"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
+    public UnityEngine.Object GetAsset(string obj, string bundleName, bool isScene = false)
     {
         //思想:检查所有资源是否已经加载缓存到字典里
         //然后从缓存的字典中取出
@@ -48,20 +55,20 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
         if (!useAB)
         {
             //检查资源是否加载缓存
-            CheckResources(obj,bundleName);
+            CheckResources(obj, bundleName);
         }
         else
         {
-            
+
             //检查Assetbundle是否加载缓存
             CheckAssetBundle(bundleName);
         }
 
-        
-       
-        if (isScene==true)
+
+
+        if (isScene == true)
         {
-            
+
             return null;
         }
         else
@@ -84,12 +91,13 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
             //如果都没问题 就返回缓存中取到的物体
             return resource;
         }
-        
-       
+
+
     }
 
     //编辑器模式下,非AB模式的资源加载方式
-    private void CheckResources(string obj, string bundleName) {
+    private void CheckResources(string obj, string bundleName)
+    {
 #if UNITY_EDITOR
         ABInfo abInfo;
         //先从缓存中查询 如果已经存在 直接加上引用次数即可
@@ -114,13 +122,14 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
 
         //因为所有资源路径都是唯一的 所以这里长度永远只会是1
         List<string> realPath = AssetDatabase.GetAssetPathsFromAssetBundle(bundleName).ToList();
-        if (realPath.Count>1)
+        if (realPath.Count == 0) { Debug.Log("未获取到资源"); }
+        if (realPath.Count > 1)
         {
             Debug.LogError("realPath > 1");
         }
         UnityEngine.Object resource = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(realPath[0]);
         AddResource(bundleName, obj, resource);
-      
+
         //资源缓存
         //foreach (string s in realPath)
         //{
@@ -134,7 +143,7 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
         {
             Name = bundleName,
             AssetBundle = null,
-            RefCount=1,
+            RefCount = 1,
         };
         //AB缓存
         this.bundles[bundleName] = abInfo;
@@ -144,10 +153,11 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
     }
 
     //加载Assetbundle
-    private void CheckAssetBundle(string bundleName) {
-        
+    private void CheckAssetBundle(string bundleName)
+    {
+
         //通过AssetBundleManifestObject来确定各个AB之间的依赖 所以它如果是空 要先加载它
-        if (AssetBundleManifestObject==null)
+        if (AssetBundleManifestObject == null)
         {
             AssetBundle mainAB = AssetBundle.LoadFromFile(Path.Combine(PathHelper.AppHotfixResPath, "StreamingAssets"));
             //通过它来查看AB之间的依赖
@@ -178,7 +188,7 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
             {
                 throw new Exception($"assets bundle not found: {bundleName}");
             }
-            
+
             //该资源如果不是场景资源
             if (!assetBundle.isStreamedSceneAssetBundle)
             {
@@ -191,12 +201,12 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
                     AddResource(allAB[i], asset.name, asset);
                 }
             }
-            
+
             abInfo = new ABInfo()
             {
                 Name = allAB[i],
                 AssetBundle = assetBundle,
-                RefCount=1,
+                RefCount = 1,
             };
             this.bundles[allAB[i]] = abInfo;
         }
@@ -207,7 +217,7 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
     {
         bundleName = bundleName.StringToAB();
         List<string> allBundle;
-        if (useAB==false)
+        if (useAB == false)
         {
             //allBundle = AssetDatabase.GetAssetPathsFromAssetBundle(bundleName).ToList();
             allBundle = new List<string>();
@@ -227,9 +237,9 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
             //    //获取到所有要卸载的AB路径
             //    allBundle = AssetBundleHelper.GetAllLoadAB(bundleName);
             //}
-          
+
         }
-        
+
         //卸载资源 实际上是由引用计数来决定的 如果减掉一次引用计数后等于0 才释放
         foreach (string bundle in allBundle)
         {
@@ -268,7 +278,7 @@ public class ResourcesComponent : UnitySingleton<ResourcesComponent>
         //思路:全局变量resourceCache是字典嵌套字典的结构
         //外层的字典 key是AB名称 
         //内层的字典是:资源名称:对应的物体Object
-       
+
         Dictionary<string, UnityEngine.Object> dict;
         //先检索外层的key是否存在 如果不存在
         if (!this.resourceCache.TryGetValue(bundleName.BundleNameToLower(), out dict))
@@ -390,8 +400,8 @@ public static class AssetBundleHelper
     //获取所有要加载的AB = 依赖+自身
     public static List<string> GetAllLoadAB(string assetBundleName)
     {
-       
-        List<string> dependencies ;
+
+        List<string> dependencies;
         //从缓存中直接获取
         if (DependenciesCache.TryGetValue(assetBundleName, out dependencies))
         {
